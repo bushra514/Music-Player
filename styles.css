@@ -1,0 +1,248 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700 &display=swap');
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+
+    background-color: rgb(248, 246, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+#music-app {
+
+    height: 450px;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 0;
+    background-color: #fff;
+    margin-top: 80px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+}
+
+
+.progress-area .song-duration,
+.controls,
+.music-list header,
+.music-list ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+i , .progress-area{
+
+    cursor: pointer;
+}
+
+
+img {
+
+    height: 200px;
+    width: 70%;
+    border-radius: 5px;
+    margin-left: 50px;
+    margin-top: -50px;
+    /* position: top; */
+    padding: 0;
+    object-fit: cover;
+
+}
+
+.song-details {
+
+    margin: 30px 0 0 50px;
+}
+
+.artist-name {
+    font-size: 0.8em;
+}
+
+.song-title {
+
+    line-height: 40px;
+}
+
+
+.song-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.song-title {
+
+    margin: 0;
+}
+
+.repeat {
+
+    margin-right: 50px;
+    color: rgb(174, 173, 173);
+
+}
+
+.repeat:hover{
+
+    margin-right: 50px;
+    color: #000000;
+}
+
+
+
+/* ************ progress area ************ */
+
+.progress-area {
+
+    height: 5px;
+    width: 80%;
+    border-radius: 50px;
+    background: #f0f0f0;
+    margin: 40px 30px;
+    position: relative;
+}
+
+.progress-area .progress-bar {
+
+    height: inherit;
+    width: 0;
+    position: absolute;
+    border-radius: inherit;
+    background: #292828;
+}
+
+.progress-bar::before {
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    top: 50%;
+    right: -5px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: inherit;
+    transition: opacity 0.2s ease;
+}
+
+
+.progress-area:hover .progress-bar::before {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.song-duration.song-timer {
+    display: flex;
+    justify-content: space-between;
+    width: 60px; /* Adjust the width of the timer section as needed */
+    font-size: 14px;
+    position: absolute;
+
+}
+
+.song-timer{
+    margin-top: 10px;
+
+}
+
+
+.song-timer span {
+    font-size: 0.8em;
+    margin-top: 35px;
+
+}
+
+span.current-time{
+    margin-right: 200px;
+
+}
+
+
+
+/* *********** Controls ***********  */
+
+.controls {
+
+    margin: 30px 0 0px 50px;
+}
+
+.controls i {
+    font-size: 45px;
+    user-select: none;
+    /* background: linear-gradient(var(--darkblue) 0%, var(--violet) 100%); */
+    background-clip: text;
+    -webkit-background-clip: text;
+    /* -webkit-text-fill-color: transparent; */
+
+    background-color: blue;
+    border-radius: 50px;
+}
+
+
+.controls i.fa-forward {
+
+    font-size: 15px;
+    margin-left: -40px;
+    transition: transform 0.3s ease;
+    color: #000000;
+
+}
+
+.controls i.fa-backward {
+
+    font-size: 15px;
+    margin-right: -40px;
+    color: #000000;
+
+}
+
+.controls i.fa-forward:hover {
+
+        /* background: rgb(214, 212, 212); */
+        border-radius: 50%;
+        transform: scale(1.2); 
+        color: rgb(174, 173, 173);
+}
+
+.controls i.fa-backward:hover  {
+
+        /* background: rgb(214, 212, 212); */
+        border-radius: 50%;
+            transform: scale(1.2); 
+        color: rgb(174, 173, 173);
+}
+
+
+
+.controls i.fa-shuffle {
+
+    font-size: 15px;
+    color: rgb(174, 173, 173);
+}
+
+.controls i.fa-bars {
+
+    font-size: 15px;
+    color: rgb(174, 173, 173);
+}
+
+
+
